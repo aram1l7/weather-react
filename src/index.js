@@ -33,7 +33,7 @@ function App() {
     return `${day} ${date}, ${month} ${year}`;
   };
   const inputChange = (e) => {
-    setSearch(e.target.value);
+    setSearch(e.target.value.trim());
   };
   return (
     <div className={typeof weather.main != "undefined" ? (weather.main.temp > 16 ? "app sun" : "app") : "app"}>
